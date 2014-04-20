@@ -14,10 +14,9 @@ You can start from the included skeleton in the `p1_crud` directory.
 
 ##Releases
 
-###Release 0 : RESTful CRUD
+###Release 0 : RESTful Routing
 
-
-Modify the skeleton code to achieve the following functionality:
+Your task is to implement the seven [RESTful routes](http://guides.rubyonrails.org/routing.html). Modify the skeleton code to achieve the following functionality:
 
 1. A user Create a new note.  
 2. A user can Read all the notes created.
@@ -25,13 +24,9 @@ Modify the skeleton code to achieve the following functionality:
 4. A user can Delete an existing note. 
 5. Verify that a user really wants to delete a particular note. 
 
-Your note table should have a `title` and `content` field.  You should use [RESTful routes](http://guides.rubyonrails.org/routing.html) for each operation. 
+Your note table should have a `title` and `content` field.  
 
-
-### Release 1 : Add Partials 
-Use Partials to convert your page to a single page application.
-
-### Release 2 : Add AJAX (optional) 
+### Release 1 : Add AJAX (optional) 
 
 Redo your application so that each CRUD route is triggered from an AJAX request.  When necessary, return a partial to update your display. 
  
