@@ -18,11 +18,13 @@ You can start from the included skeleton in the `p1_crud` directory.
 
 Your task is to implement the seven [RESTful routes](http://guides.rubyonrails.org/routing.html). Modify the skeleton code to achieve the following functionality:
 
-1. A user Create a new note.  
+1. A user can Create a new note.  
 2. A user can Read all the notes created.
 3. A user can Update a note. 
 4. A user can Delete an existing note. 
-5. Verify that a user really wants to delete a particular note. 
+5. A user can see a page where she can create a new note. 
+6. A user can see a page where she can edit a note.
+7. A user see a page that shows a single note.
 
 Your note table should have a `title` and `content` field.  
 
