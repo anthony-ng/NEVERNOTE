@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'rspec-html-matchers'
 
 # All our specs should require 'spec_helper' (this file)
 
