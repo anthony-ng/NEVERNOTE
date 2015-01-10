@@ -14,6 +14,8 @@ gem 'thin'
 gem 'activesupport'
 gem 'activerecord'
 
+gem 'github-markdown'
+
 gem 'rake'
 
 group :test do

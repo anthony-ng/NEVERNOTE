@@ -1,28 +1,26 @@
 # P1 Sinatra Restful CRUD 
  
-##Learning Competencies 
+## Learning Competencies 
 
 * Implement CRUD in a MVC application (using Sinatra)
 * Use Active Record to perform CRUD operations on a database
 * Use RESTful routes
 
-##Summary 
+## Summary 
 
 Using Sinatra, create a simple notes application with a single notes table in the database and all [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) routes and views.  
 
 You can start from the included skeleton
 
-##Tools
+## Tools
 * ``rackup`` - Reads the ``config.ru`` file and starts the sinatra server
 * ``rspec`` - Runs the specs under the spec folder
 * ``rake -T`` - Show the available Rake Tasks
-
-
 * Remember ``shotgun`` is a *development tool*, it is not used to run websites under normal circumstances. If you want to use it, [understand what it does](http://ruby.about.com/od/sinatra/a/sinatra5.htm) and install it yourself :)
 
-##Releases
+## Releases
 
-###Release 0 : RESTful Routing
+### Release 0 : RESTful Routing
 
 Your task is to implement the seven [RESTful routes](http://guides.rubyonrails.org/routing.html). Modify the skeleton code to achieve the following functionality:
 
@@ -52,7 +50,7 @@ Add AJAX to your Application
   * If there are validation errors they are displayed without a page refresh
   * If the form submission is successful, and only then, the redirect occurrs
  
-##Resources
+## Resources
 
 * [Sinatra Crud Tutorial ](http://net.tutsplus.com/tutorials/ruby/singing-with-sinatra/) 
 * [Rendering Partials in Sinatra](http://www.sinatrarb.com/faq.html#partials) 
