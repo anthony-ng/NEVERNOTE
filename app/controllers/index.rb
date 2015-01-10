@@ -1,8 +1,7 @@
 get '/' do
   # Look in app/views/index.erb
-  erb :index
-end
+ 
+  @readme_content = File.read(APP_ROOT.join('README.md'))
 
-get '/info' do
-  Demo.new(self).info
+  erb :index
 end

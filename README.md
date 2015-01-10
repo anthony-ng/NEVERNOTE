@@ -1,43 +1,56 @@
-# P1 Sinatra Restful Crud 
+# P1 Sinatra Restful CRUD 
  
-##Learning Competencies 
+## Learning Competencies 
 
 * Implement CRUD in a MVC application (using Sinatra)
 * Use Active Record to perform CRUD operations on a database
 * Use RESTful routes
 
-##Summary 
+## Summary 
 
 Using Sinatra, create a simple notes application with a single notes table in the database and all [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) routes and views.  
 
-You can start from the included skeleton.
+You can start from the included skeleton
 
-##Releases
+## Tools
+* ``rackup`` - Reads the ``config.ru`` file and starts the sinatra server
+* ``rspec`` - Runs the specs under the spec folder
+* ``rake -T`` - Show the available Rake Tasks
+* Remember ``shotgun`` is a *development tool*, it is not used to run websites under normal circumstances. If you want to use it, [understand what it does](http://ruby.about.com/od/sinatra/a/sinatra5.htm) and install it yourself :)
 
-###Release 0 : RESTful CRUD
+## Releases
 
+### Release 0 : RESTful Routing
 
-Modify the skeleton code to achieve the following functionality:
+Your task is to implement the seven [RESTful routes](http://guides.rubyonrails.org/routing.html). Modify the skeleton code to achieve the following functionality:
 
-1. A user Create a new note.  
-2. A user can Read all the notes created.
-3. A user can Update a note. 
-4. A user can Delete an existing note. 
-5. Verify that a user really wants to delete a particular note. 
+1. Any user can read all the notes created on the ``/notes`` page
+2. Any user see a page that shows a single note.
+3. Any user can Create a new note and be redirected to the single note page for that new note
+4. Any user can Update a note and be redirected to the ``/notes`` page
+4. Any user can Delete an existing note and be redirected to the ``/notes`` page
+5. Any user can see a page where she can create a new note. 
+6. Any user can see a page where she can edit a note.
 
-Your note table should have a `title` and `content` field.  You should use [RESTful routes](http://guides.rubyonrails.org/routing.html) for each operation. 
+* Your notes table should have a `title` and `content` field.  
+* Start by planning the routes you will use
 
+### Release 1 : Add Model Validations and FORM Error Messages
 
-### Release 1 : Add Partials 
-Use Partials to convert your page to a single page application.
+1. Your Note model should have validations which require both the ``title`` and ``content`` fields
+2. When the user attempt to enter a blank value for either the title of the content the database should not be changed and the form should be redisplayed with the error messages from failed model validations
 
-### Release 2 : Add AJAX (optional) 
+### Release 2 : Add AJAX (Optional!! - add this after we cover JavaScript) 
 
-Redo your application so that each CRUD route is triggered from an AJAX request.  When necessary, return a partial to update your display. 
+Add AJAX to your Application
+
+1. When JavaScript is disabled your application should still work as before
+2. When javascript is enabled:
+  * The form submissions occurr via jQuery AJAX requests
+  * If there are validation errors they are displayed without a page refresh
+  * If the form submission is successful, and only then, the redirect occurrs
  
-<!-- ##Optimize Your Learning  -->
-
-##Resources
+## Resources
 
 * [Sinatra Crud Tutorial ](http://net.tutsplus.com/tutorials/ruby/singing-with-sinatra/) 
 * [Rendering Partials in Sinatra](http://www.sinatrarb.com/faq.html#partials) 
