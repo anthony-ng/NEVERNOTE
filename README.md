@@ -1,4 +1,4 @@
-# P1 Sinatra Restful CRUD 
+# Sinatra Restful CRUD 
  
 ## Learning Competencies 
 
