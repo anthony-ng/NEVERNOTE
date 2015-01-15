@@ -10,14 +10,6 @@
 
 Using Sinatra, create a simple notes application with a single notes table in the database and all [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) routes and views.  
 
-You can start from the included skeleton
-
-## Tools
-* ``rackup`` - Reads the ``config.ru`` file and starts the sinatra server
-* ``rspec`` - Runs the specs under the spec folder
-* ``rake -T`` - Show the available Rake Tasks
-* Remember ``shotgun`` is a *development tool*, it is not used to run websites under normal circumstances. If you want to use it, [understand what it does](http://ruby.about.com/od/sinatra/a/sinatra5.htm) and install it yourself :)
-
 ## Releases
 
 ### Release 0 : RESTful Routing
