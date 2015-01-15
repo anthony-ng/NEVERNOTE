@@ -40,7 +40,7 @@ Your task is to implement the seven [RESTful routes](http://guides.rubyonrails.o
 1. Your Note model should have validations which require both the ``title`` and ``content`` fields
 2. When the user attempt to enter a blank value for either the title of the content the database should not be changed and the form should be redisplayed with the error messages from failed model validations
 
-### Release 2 : Add AJAX (Optional!! - add this after we cover JavaScript) 
+### Release 2 : Add AJAX
 
 Add AJAX to your Application
 
