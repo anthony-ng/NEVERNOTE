@@ -23,7 +23,7 @@ a {
   border: 1px black solid;
 }
 
-#title, .content {
+.title, .content {
   margin-left: 30px;
 }
 

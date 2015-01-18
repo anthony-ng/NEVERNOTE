@@ -1,4 +1,7 @@
-# start at 5:08pm
+before %r[/notes/(\d+)] do
+  @note = Note.find_by(params[:id])
+end
+
 get '/' do
   redirect '/notes'
 end
@@ -17,32 +20,34 @@ end
 # create a new note (3)
 post '/notes' do
   note = Note.create(params[:note])
-  redirect '/notes'
+
+  if note.id && note.content
+    redirect '/notes'
+  else
+    @error = true
+    erb :new
+  end
 end
 
 # display a specific note (2)
 get '/notes/:id' do
-  @note = Note.find_by(id: params[:id])
   erb :show
 end
 
 # return an HTML form for editing a note (7)
 get '/notes/:id/edit' do
-  @note = Note.find_by(id: params[:id])
   erb :edit
 end
 
 # update a specific photo (4)
 put '/notes/:id' do
-  note = Note.find_by(id: params[:id])
-  note.update_attributes(params[:note])
+  @note.update_attributes(params[:note])
   redirect '/notes'
 end
 
 # delete a specific photo (5)
 delete '/notes/:id' do
-  note= Note.find_by(id: params[:id])
-  note.destroy
+  @note.destroy
   redirect '/notes'
 end
 
