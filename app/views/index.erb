@@ -4,20 +4,20 @@
     <input type="submit" value="New Note">
   </form>
 
-  <% if @notes %>
+  <% if @notes.length > 0 %>
     <% @notes.each do |note| %>
       <div class="show">
         <% if note.content.length < 10 %>
-          <h3 class="title">Note: <a href="/notes/<%= note.id %>"><%= note.title %></h3></a>
+          <h3 class="title">Note: <a href="/notes/<%= note.id %>"><%= note.title %></a></h3>
           <p class="content"><%= note.content %></p>
         <% else %>
-          <h3 class="title">Note: <a href="/notes/<%= note.id %>"><%= note.title %></h3></a>
+          <h3 class="title">Note: <a href="/notes/<%= note.id %>"><%= note.title %></a></h3>
           <p class="content"><%= note.content[0..5] + note.content[6..30].gsub(/\w+.*$/, '...') %></p>
         <% end %>
       </div>
     <% end %>
   <% else %>
-    <p>Add some notes!</p>
+    <h3>Add some notes!</h3>
   <% end %>
 
 </div>
