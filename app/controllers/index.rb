@@ -1,5 +1,5 @@
-before %r[/notes/(\d+)] do
-  @note = Note.find_by(params[:id])
+before %r[/notes/(\d+)] do |note_id|
+  @note = Note.find(note_id)
 end
 
 get '/' do
