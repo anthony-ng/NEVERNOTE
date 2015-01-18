@@ -5,6 +5,7 @@ end
 
 # display a list of all notes (1)
 get '/notes' do
+  @notes = Note.all
   erb :index
 end
 
