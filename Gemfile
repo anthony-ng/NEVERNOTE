@@ -24,7 +24,6 @@ gem 'rake'
 group :test do
   gem 'rspec-html-matchers'
   gem 'shoulda-matchers'
-  gem 'rack-test'
 end
 
 group :test, :development do
