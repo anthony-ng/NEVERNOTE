@@ -11,13 +11,14 @@ end
 
 # return an HTML form for creating a new note (6)
 get '/notes/new' do
-  @notes = Note.all
-  @
   erb :new
 end
 
 # create a new note (3)
 post '/notes' do
+  @note = Note.create(params[:note])
+  p @note
+  p @note.class
 end
 
 # display a specific note (2)
