@@ -41,6 +41,9 @@ end
 
 # delete a specific photo (5)
 delete '/notes/:id' do
+  note= Note.find_by(id: params[:id])
+  note.destroy
+  redirect '/notes'
 end
 
 # @readme_content = File.read(APP_ROOT.join('README.md'))
