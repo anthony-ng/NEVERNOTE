@@ -16,13 +16,14 @@ end
 
 # create a new note (3)
 post '/notes' do
-  @note = Note.create(params[:note])
-  p @note
-  p @note.class
+  note = Note.create(params[:note])
+  redirect '/notes/'
 end
 
 # display a specific note (2)
 get '/notes/:id' do
+  @note = Note.find_by(id: params[:id])
+  erb :show
 end
 
 # return an HTML form for editing a note (7)
