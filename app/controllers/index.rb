@@ -33,41 +33,4 @@ end
 delete '/notes/:id' do
 end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  # @readme_content = File.read(APP_ROOT.join('README.md'))
+# @readme_content = File.read(APP_ROOT.join('README.md'))
