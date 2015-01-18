@@ -11,6 +11,8 @@ end
 
 # return an HTML form for creating a new note (6)
 get '/notes/new' do
+  @notes = Note.all
+  @
   erb :new
 end
 
