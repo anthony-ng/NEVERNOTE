@@ -1,10 +1,18 @@
 <div class="container">
   <h1>NEVERNOTE</h1>
+  <form action="/notes/new" id="new">
+    <input type="submit" value="New Note">
+  </form>
   <% @notes.each do |note| %>
-  <table>
-    <p>Note: <%= note.title %></p>
-    <p><%= note.content %></p>
-  </table>
+
+  <div class="show">
+    <h3 id="title">Note: <a href="/notes/<%= note.id %>"><%= note.title %></h3></a>
+    <% if note.content.length < 10 %>
+      <p class="content"><%= note.content %></p>
+    <% else %>
+      <p class="content"><%= note.content[0..5] + note.content[6..30].gsub(/\w+.*$/, '...') %></p>
+    <% end %>
+  </div>
   <% end %>
 </div>
 

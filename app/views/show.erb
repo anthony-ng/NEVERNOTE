@@ -1,6 +1,6 @@
 <div class="container">
   <table>
-    <p>Note: <%= @note.title %></p>
+    <h1><%= @note.title %></h1>
     <p><%= @note.content %></p>
     <li>
       <form action="/notes/<%= @note.id %>/edit ">
@@ -11,6 +11,11 @@
       <form action="/notes/<%= @note.id %>" method="POST">
         <input type="hidden" name="_method" value="DELETE">
         <input type="submit" value="Delete">
+      </form>
+    </li>
+    <li>
+      <form action="/notes">
+        <input type="submit" value="Back">
       </form>
     </li>
   </table>
