@@ -34,7 +34,8 @@ end
 
 # update a specific photo (4)
 put '/notes/:id' do
-  @note = Note.update_attribute(id: params[:id])
+  note = Note.find_by(id: params[:id])
+  note.update_attributes(params[:note])
   redirect '/notes'
 end
 

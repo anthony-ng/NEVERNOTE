@@ -1,10 +1,10 @@
 <div class="container">
   <h1>Edit Note</h1>
 
-  <form action="/notes/<%= @note.id %>" method="post">
+  <form action="/notes/<%= @note.id %>" method="POST">
     <input type="hidden" name="_method" value="PUT">
-    <input type="text" name="note[title]" value="Title" onclick="this.select()">
-    <input type="text" name="note[content]" value="Content" onclick="this.select()">
+    <input type="text" name="note[title]" value="<%= @note.title %>" onclick="this.select()">
+    <input type="text" name="note[content]" value="<%= @note.content %>" onclick="this.select()">
     <input type="submit" value="Submit" >
   </form>
 </div>
