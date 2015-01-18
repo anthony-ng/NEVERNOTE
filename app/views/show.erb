@@ -2,5 +2,14 @@
   <table>
     <p>Note: <%= @note.title %></p>
     <p><%= @note.content %></p>
+    <li>
+      <a href="/notes/<%= @note.id %>/edit">Edit</a>
+    </li>
+    <li>
+      <form action="/notes/<%= @note.id %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete">
+      </form>
+    </li>
   </table>
 </div>
