@@ -1,7 +1,7 @@
 <div class="container">
   <h1>Edit Note</h1>
 
-  <form action="/notes" method="post">
+  <form action="/notes/<%= @note.id %>" method="post">
     <input type="hidden" name="_method" value="PUT">
     <input type="text" name="note[title]" value="Title" onclick="this.select()">
     <input type="text" name="note[content]" value="Content" onclick="this.select()">

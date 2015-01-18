@@ -28,6 +28,7 @@ end
 
 # return an HTML form for editing a note (7)
 get '/notes/:id/edit' do
+  @note = Note.find_by(id: params[:id])
   erb :edit
 end
 
