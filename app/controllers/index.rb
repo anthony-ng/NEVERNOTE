@@ -20,7 +20,13 @@ end
 # create a new note (3)
 post '/notes' do
   note = Note.create(params[:note])
-  redirect '/notes'
+
+  if note.id && note.content
+    redirect '/notes'
+  else
+    @error = true
+    erb :new
+  end
 end
 
 # display a specific note (2)

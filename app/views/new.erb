@@ -6,4 +6,8 @@
     <input type="text" name="note[content]" value="Content" onclick="this.select()">
     <input type="submit" value="Submit" >
   </form>
+
+  <% if @error %>
+    <h4>Please enter BOTH title & content!</h4>
+  <% end %>
 </div>
