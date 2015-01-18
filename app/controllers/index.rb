@@ -17,7 +17,7 @@ end
 # create a new note (3)
 post '/notes' do
   note = Note.create(params[:note])
-  redirect '/notes/'
+  redirect '/notes'
 end
 
 # display a specific note (2)
@@ -28,10 +28,13 @@ end
 
 # return an HTML form for editing a note (7)
 get '/notes/:id/edit' do
+  erb :edit
 end
 
 # update a specific photo (4)
 put '/notes/:id' do
+  @note = Note.update_attribute(id: params[:id])
+  redirect '/notes'
 end
 
 # delete a specific photo (5)
