@@ -7,10 +7,11 @@
   <% if @notes %>
     <% @notes.each do |note| %>
       <div class="show">
-        <% if note.content %>
-          <h3 id="title">Note: <a href="/notes/<%= note.id %>"><%= note.title %></h3></a>
+        <% if note.content.length < 10 %>
+          <h3 class="title">Note: <a href="/notes/<%= note.id %>"><%= note.title %></h3></a>
           <p class="content"><%= note.content %></p>
         <% else %>
+          <h3 class="title">Note: <a href="/notes/<%= note.id %>"><%= note.title %></h3></a>
           <p class="content"><%= note.content[0..5] + note.content[6..30].gsub(/\w+.*$/, '...') %></p>
         <% end %>
       </div>
