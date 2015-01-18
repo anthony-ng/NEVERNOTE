@@ -22,12 +22,12 @@ gem 'github-markdown'
 gem 'rake'
 
 group :test do
-  gem 'rspec-html-matchers'
+  # gem 'rspec-html-matchers'
   gem 'shoulda-matchers'
 end
 
 group :test, :development do
-  gem 'rspec'
+  # gem 'rspec'
   gem 'factory_girl'
   gem 'faker'
 end

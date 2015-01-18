@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'rspec-html-matchers'
+# require 'rspec-html-matchers'
 
 # All our specs should require 'spec_helper' (this file)
 
@@ -12,9 +12,9 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'shoulda-matchers'
 require 'rack/test'
 
-RSpec.configure do |config|
-  config.include Rack::Test::Methods
-end
+# RSpec.configure do |config|
+#   config.include Rack::Test::Methods
+# end
 
 def app
   Sinatra::Application
